@@ -25,3 +25,18 @@ print(restaurant.restaurant_name, restaurant.cuisine_type)
 """调用类中的方法"""
 restaurant.describe_restaurant()
 restaurant.open_restaurant()
+
+
+
+# 9-2 三家餐馆:根据你完成的练习9-1而编写的类创建三个实例,并对每个实例调用describe_restaurant().
+print("This is the code for 9-2 practice.")
+"""创建三个实例"""
+restaurant_zh = Restaurant(restaurant_name='中餐馆',cuisine_type='fried dishes')
+restaurant_In = Restaurant(restaurant_name='GaliGali',cuisine_type='boiling')
+restaurant_Kr = Restaurant(restaurant_name='shiguobanfan',cuisine_type='shiguo')
+
+
+"""分别调用describe_reastaurant方法"""
+restaurant_zh.describe_restaurant()
+restaurant_In.describe_restaurant()
+restaurant_Kr.describe_restaurant()
