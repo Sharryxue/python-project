@@ -40,3 +40,5 @@ restaurant_Kr = Restaurant(restaurant_name='shiguobanfan',cuisine_type='shiguo')
 restaurant_zh.describe_restaurant()
 restaurant_In.describe_restaurant()
 restaurant_Kr.describe_restaurant()
+
+

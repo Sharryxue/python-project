@@ -28,3 +28,48 @@ TypeError: Restaurant.open_restaurant() takes 0 positional arguments but 1 was g
 
 解决:
 def open_restaurant(self):
+
+9-3 中遇到的问题: 
+Issue 1
+如下代码
+    """用户信息描述"""
+    def describe_user(self):
+
+问题:
+SyntaxError: expected ':'
+原因
+忘记了 ":"
+
+解决:
+加上":"即可
+
+Issue 2
+代码如下:
+        if self.gender.title()==Male:
+问题
+Traceback (most recent call last):
+  File "c:\Sharry\python-project\exercises\9\users.py", line 27, in <module>
+    user_alan.describe_user()
+  File "c:\Sharry\python-project\exercises\9\users.py", line 16, in describe_user
+    if self.gender.title()==Male:
+                            ^^^^
+NameError: name 'Male' is not defined. Did you mean: 'False'?
+
+原因:
+此处的 Male 是具体的数值, 所以是字符串. 应放入 ""  中.
+
+解决
+改成"Male"即可
+
+Issue 3
+代码如下:
+    user_alan=Users(first_name='alan',last_name='zhang',age='30',
+
+问题
+NameError: name 'Users' is not defined
+
+原因
+声明实例时应与class 定义对其, 否则会被处理成内部的方法.
+
+解决
+与类对其,删除前边多余的tab.
