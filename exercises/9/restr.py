@@ -3,10 +3,11 @@
 
 class Restaurant():
     """餐馆初始化"""
-    def __init__(self,restaurant_name,cuisine_type):
+    def __init__(self,restaurant_name,cuisine_type,number_served=0):
             """初始化属性"""
             self.restaurant_name=restaurant_name
             self.cuisine_type=cuisine_type
+            self.number_served=number_served
 
     """描述餐厅名字以及类型"""
     def describe_restaurant(self):
@@ -16,6 +17,18 @@ class Restaurant():
     """餐厅营业状态"""
     def open_restaurant(self):
           print("The restaurant is curentlt open for bussiness.")
+
+      # 添加一个名为set_number_served()的方法,它让你能够设置就餐人数.调用这个方法并向它传递一个值,然后再次打印这个值.
+      # 添加一个名为increace_number_served()的方法,他让你能够将就餐人数递增.调用这个方法并向它传递一个这样的值:你认为这家餐馆每天可能接待的就餐人数.
+    """设置就餐人数"""
+    def set_number_served(self,number_served):
+         self.number_served=number_served
+
+         print("We've served " + str(self.number_served) + " people since we open the business.")
+
+    """添加就餐人数"""
+    def increace_number_served(self,increace):
+         self.number_served +=increace
 
 restaurant = Restaurant(restaurant_name='Mr Pizza',cuisine_type='pizza')
 
@@ -42,3 +55,19 @@ restaurant_In.describe_restaurant()
 restaurant_Kr.describe_restaurant()
 
 
+# 9-4 就餐人数:在为完成练习9-1而编写的程序中,添加一个名为 number_served 的属性,并将其默认值设置为0,根据这个类创建一个名为restaurant的实例;打印有多少人在这家餐馆就餐过,然后修改这个值并再次打印它.
+# 添加一个名为set_number_served()的方法,它让你能够设置就餐人数.调用这个方法并向它传递一个值,然后再次打印这个值.
+# 添加一个名为increace_number_served()的方法,他让你能够将就餐人数递增.调用这个方法并向它传递一个这样的值:你认为这家餐馆每天可能接待的就餐人数.
+
+print("This is the code for 9-4 practice.")
+"""创建一个实例, 并为其变量直接赋值"""
+restaurant_serve = Restaurant(restaurant_name='中餐馆',cuisine_type='fried dishes')
+print("See how many people we served since openning: " + str(restaurant_serve.number_served))
+restaurant_serve.number_served=100
+print("See how many people we served since openning: " + str(restaurant_serve.number_served))
+
+"""调用新建的设置就餐人数方法进行赋值"""
+restaurant_serve.set_number_served(200)
+
+restaurant_serve.increace_number_served(1000)
+print(str(restaurant_serve.number_served) + " people we'd served by today.")
