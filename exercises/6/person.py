@@ -91,3 +91,30 @@ for name, meaning in code_name2.items():
     print("\n" + name + ":" + meaning)
 
 
+# 6-5 河流: 创建一个字典,.
+
+code_name2 = {
+    "列表":"列表由一系列按特定顺序排列的元素组成.列表放在方括号中.",
+    "元组":"不可变的列表被称为元组,元组看起来像列表,但是由圆括号来表示.",
+    "字典":"字典是一系列键-值对.字典放在花括号中.",
+    "函数":"函数是带名字的代码块,用于完成具体的工作.",
+    "类":"表示现实世界的事务或情形,编写类时,定义一大类都有的通用行为.",
+}
+
+"""同行加冒号':'显示."""
+for name, meaning in code_name2.items():
+    print(name + ":" + meaning)
+
+"""换行缩进显示."""
+for name,meaning in code_name2.items():
+    print(name + "\n" + "   " + meaning)
+
+"""字典中插入数据"""
+code_name2["循环"]="包括for循环和while循环."
+code_name2["条件判断"]="包括if语句, elif, else语句等."
+code_name2["变量"]="变量只能包含字母数字和下划线.变量名可以字母或下划线打头,但不能以数字打头."
+code_name2["数据类型"]="字符串,数字,整数,浮点数."
+code_name2["注释"]="阐述代码要做什么以及如何做."
+
+for name, meaning in code_name2.items():
+    print("\n" + name + ":" + meaning)
